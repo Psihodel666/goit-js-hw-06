@@ -22,7 +22,7 @@ ulList.style.listStyle = 'none';
 ulList.insertAdjacentHTML("afterbegin", 
   images.map(img => 
     `<li>
-        <img src = ${img.url} alt = ${img.alt} width = "250" height = '250'>
+        <img src = ${img.url} alt = '${img.alt}' width = "250" height = '250'>
     </li>`).join(" "));
 
 

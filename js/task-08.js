@@ -9,20 +9,24 @@ form.addEventListener('submit', (e) => {
         elements : {email, password},
     } = e.currentTarget;
     
-    if(email.value == '' && password.value === ''){
+    if(email.value === '' && password.value === ''){
         alert('Введите почту и пароль')
     }else if(email.value === ''){
         alert('Введите почту')
     }else if(password.value === ''){
         alert('Введите пароль')
+    }else{
+        const refs = {
+            email:email.value,
+            password:password.value,
+        };
+        form.reset();
+        console.log(refs);
     }
 
-    const refs = {
-        email:email.value,
-        password:password.value,
-    };
+    
 
-    console.log(refs);
-    form.reset();
+    
+    
     
 })

@@ -6,10 +6,12 @@ input.addEventListener('blur', validationInput);
 
 function validationInput (e){
     if(e.currentTarget.value.length === dataLength){
-        input.style.borderColor = 'green';
+        input.classList.remove('invalid');
+        input.classList.add('valid')
     }else{
-        input.style.borderColor = 'red';
-        
+        input.classList.remove('valid');
+        input.classList.add('invalid')
+    
     }
     
 }
