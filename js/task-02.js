@@ -16,8 +16,6 @@ const itemList = ingredients.map(ingredient =>{
 })
 console.log(itemList);
 
-for(let key of itemList){
-  ulList.append(key);
-}
+ulList.append(...itemList);
 
 
